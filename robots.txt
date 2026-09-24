@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gero3d.com/sitemap.xml
