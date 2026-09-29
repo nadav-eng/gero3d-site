@@ -15,7 +15,11 @@ jobs:
       url: ${{ steps.d.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - run: mkdir _site && unzip -q gero3d-site.zip -d _site && ls -R _site | head -40
+      # Deploys the highest-numbered gero3d-site-vN.zip in the repo root
+      - run: |
+          ZIP=$(ls gero3d-site-v*.zip | sort -V | tail -1)
+          echo "Deploying $ZIP"
+          mkdir _site && unzip -q "$ZIP" -d _site && ls -R _site | head -40
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
