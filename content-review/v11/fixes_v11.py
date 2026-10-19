@@ -101,3 +101,49 @@ for dp, _, fs in os.walk(root):
             s = s.replace(can.group(0), can.group(0) + f'\n<meta property="og:url" content="{can.group(1)}">', 1)
         wr(p, s)
 print('ok', len(dims), 'images sized')
+
+# 5. Design (Apple HIG) review fixes
+here = os.path.dirname(os.path.abspath(__file__))
+css = rd('assets/css/site.css')
+if 'Design review (Apple HIG pass' not in css:
+    css += '\n' + open(os.path.join(here, 'hig-fixes.css'), encoding='utf-8').read()
+    css += '''
+/* Patients benefit headings are h2 (they follow the h1 directly) but keep the card heading size */
+.benefit h2 { font-size: 21px; font-weight: 500; letter-spacing: -0.005em; line-height: 1.3; }
+/* Step titles read as sentence case */
+.step h3 { text-transform: none; }
+'''
+    wr('assets/css/site.css', css)
+
+for p in ['3d-printed-cast/index.html', 'he/3d-printed-cast/index.html']:
+    wr(p, sub1(rd(p), '<th scope="col"></th>', '<td></td>', p + ' th'))
+
+for p in ['patients/index.html', 'he/patients/index.html']:
+    s = rd(p)
+    s, n = re.subn(r'(<div class="benefit">(?:(?!</div>).)*?)<h3>(.*?)</h3>', r'\1<h2>\2</h2>', s, flags=re.S)
+    assert n == 5, (p, n)
+    wr(p, s)
+
+for dp, _, fs in os.walk(root):
+    if 'index.html' in fs:
+        p = os.path.relpath(os.path.join(dp, 'index.html'), root)
+        s = rd(p)
+        if '<html lang="he"' in s:
+            continue
+        s2 = re.sub(r'(<li class="step"><span class="n">\d+</span><h3>)([a-z])', lambda m: m.group(1) + m.group(2).upper(), s)
+        s2 = re.sub(r'(<h3>)(scan|customize|print|heal|demo|setup|pilot|decide)(</h3>)', lambda m: m.group(1) + m.group(2).capitalize() + m.group(3), s2)
+        if s2 != s:
+            wr(p, s2)
+
+# 404: English-only footer like every other English page
+s = rd('404.html')
+s, n = re.subn(r'<a href="/he/clinics/" lang="he">לקליניקות</a><a href="/he/3d-printed-cast/" lang="he">גבס מודפס בתלת מימד</a>',
+              '<a href="/3d-printed-cast/">3D-printed cast</a><a href="/3d-printed-afo/">3D-printed AFO</a>', s)
+assert n == 1
+wr('404.html', s)
+print('design fixes ok')
+
+# Plaster weight as Nadav gave it (1.5-2 kg)
+for p, old, new in [('patients/index.html', 'weighs almost 2 kilograms', 'weighs 1.5 to 2 kilograms'),
+                    ('index.html', 'against almost 2 kg for a traditional plaster cast', 'against 1.5 to 2 kg for a traditional plaster cast')]:
+    wr(p, sub1(rd(p), old, new, p + ' weight'))
