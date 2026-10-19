@@ -116,7 +116,15 @@ for p in sorted(pages):
     assert n1 == 1 and n2 == 1, p
     # The header language switch replaces the per-page "English / עברית" links in the page labels.
     s = re.sub(r' · <a href="[^"]+" lang="(?:en|he)">(?:English|עברית|בעברית)</a>(</p>)', r'\1', s)
+    # Mobile: a visible language switch in the header bar, next to the menu button.
+    s = re.sub(r'<a class="lang-switch lang-switch-m"[^>]*>[^<]*</a>', '', s)
+    if p in OTHER:
+        m_ = ('<a class="lang-switch lang-switch-m" href="%s" hreflang="he" lang="he" aria-label="עברית">עב</a>' if lang == 'en'
+              else '<a class="lang-switch lang-switch-m" href="%s" hreflang="en" lang="en" aria-label="English">EN</a>') % OTHER[p]
+        s = s.replace('<button class="menu-toggle"', m_ + '\n    <button class="menu-toggle"', 1)
     if lang == 'he':
+        s = s.replace('<html lang="he">', '<html lang="he" dir="rtl">', 1)
+        s = s.replace('<span>© 2026 Gero3D · scan · print · heal</span>', '<span dir="ltr">© 2026 Gero3D · scan · print · heal</span>')
         s = s.replace('href="/#video"', 'href="/he/#video"')
         if p == '/he/clinics/thanks/':
             s = s.replace('<a class="btn btn-primary" href="/">', '<a class="btn btn-primary" href="/he/">')
@@ -143,7 +151,18 @@ if '.lang-switch' not in c:
 .nav .lang-switch { font-size: 13px; font-weight: 500; letter-spacing: .04em; padding: 4px 10px; border: 1px solid rgba(26,26,26,.18); border-radius: 999px; }
 .nav .lang-switch:hover { border-color: var(--gero-blue); }
 [dir="rtl"] .label { letter-spacing: .02em; }
-@media (max-width: 860px) { .nav .lang-switch { border: 0; border-bottom: 1px solid rgba(26,26,26,.07); border-radius: 0; padding: 12px 0; font-size: 17px; } }
+/* Hebrew pages are dir="rtl" on <html>: in RTL a plain row already puts the logo on the right */
+[dir="rtl"] .site-header .wrap { flex-direction: row; }
+/* Off-screen helpers sit off the right edge in RTL, where they can't widen the page */
+[dir="rtl"] .skip { left: auto; right: -999px; }
+[dir="rtl"] .skip:focus { right: 16px; }
+[dir="rtl"] .hp { left: auto !important; right: -9999px; }
+[dir="rtl"] body { overflow-x: clip; }
+.lang-switch-m { display: none; }
+@media (max-width: 860px) {
+  .nav .lang-switch { display: none; }
+  .site-header .lang-switch-m { display: inline-block; margin-right: auto; margin-left: 0; color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: .04em; padding: 4px 10px; border: 1px solid rgba(26,26,26,.18); border-radius: 999px; }
+}
 '''
     open(css, 'w', encoding='utf-8').write(c)
 
