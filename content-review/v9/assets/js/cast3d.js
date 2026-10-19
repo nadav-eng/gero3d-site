@@ -31,7 +31,7 @@ export async function mount(el) {
   const mat = new THREE.MeshStandardMaterial({ color: 0x8c9094, roughness: 0.7, metalness: 0.0, side: THREE.DoubleSide });
   const logo = new THREE.MeshStandardMaterial({ color: 0x44fc40, roughness: 0.6 });
   const cast = new THREE.Group();
-  cast.scale.setScalar(0.034);
+  cast.scale.setScalar(0.027);
   cast.rotation.z = -Math.PI / 14;
   scene.add(cast);
 
