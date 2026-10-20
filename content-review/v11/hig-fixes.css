@@ -1,0 +1,23 @@
+
+/* Design review (Apple HIG pass, 2026-10-19) */
+/* 1. Text-size blue links and labels: #435fff is 4.0:1 on the grey surface (fails WCAG AA). A slightly deeper blue passes on white and grey; the brand blue stays for large display text and icons. */
+:root { --gero-blue-text: #3550f0; }
+a { color: var(--gero-blue-text); }
+.label.blue, .nav a:hover, .nav a[aria-current="page"], .faq-toc a:hover { color: var(--gero-blue-text); }
+
+/* 2. Touch targets: at least 44px for buttons and the FAQ section links on touch screens. */
+.nav .btn { min-height: 44px; }
+@media (max-width: 860px) {
+  .faq-toc { flex-wrap: nowrap; overflow-x: auto; gap: var(--space-2); margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scrollbar-width: none; }
+  .faq-toc::-webkit-scrollbar { display: none; }
+  .faq-toc a { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface-raised); }
+}
+
+/* 3. Mobile: the decorative pattern sits behind the page title and the hero photo edge; let the content lead. */
+@media (max-width: 760px) { .page-head::after { display: none; } }
+
+/* 4. Blog grids: three posts in a two-column grid left an orphan card; use three columns on wide screens. */
+@media (min-width: 1024px) { .posts { grid-template-columns: repeat(3, 1fr); } .posts .post-card h2 { font-size: 22px; } .posts .post-card .body { padding: var(--space-6); } }
+
+/* 5. Hebrew small caps labels: Hebrew has no uppercase, so 12px reads too small next to the headings. */
+[dir="rtl"] .label { font-size: 13px; }
