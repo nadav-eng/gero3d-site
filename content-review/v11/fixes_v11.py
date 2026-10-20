@@ -1,7 +1,7 @@
 """Bug-pass fixes on top of the v11 tree, run after mirror_chrome.py.
 
 Usage: python3 fixes_v11.py <site dir>
-- ONE Splint AMAR/FDA statements removed everywhere (EN and HE match; no regulatory claims until confirmed).
+- ONE Splint AMAR registration and FDA listing stated in both languages (confirmed by Nadav 2026-10-20).
 - Testimonials: clinical-outcome phrases cut from the quotes as marked excerpts ([…]), same in EN and HE.
 - 3D viewer: camera pulls back and up on narrow screens so the color picker doesn't cover the cast.
 - width/height on every <img> that lacks them; og:url on every page.
@@ -16,20 +16,27 @@ def sub1(s, old, new, what):
     assert old in s, what
     return s.replace(old, new)
 
-# 1. Regulatory claims
-s = rd('index.html')
-s, n = re.subn(r'<div class="cert">(?:(?!<div class="cert">).)*?<h3>(?:Israel Ministry of Health|U\.S\. FDA)</h3><p>[^<]*</p></div>', '', s, flags=re.S)
-assert n == 2, n
-wr('index.html', s)
+# 1. Regulatory status of the ONE Splint (confirmed by Nadav 2026-10-20): registered with AMAR, listed with the U.S. FDA.
+# The EN pages already say so; add the same statements to the Hebrew home and FAQ and the English cast page.
+s = rd('he/index.html')
+iso = re.search(r'<div class="cert">(<span class="seal" aria-hidden="true">.*?</span>)<h3>ISO 13485:2016</h3><p>[^<]*</p></div>', s, re.S)
+seal = iso.group(1)
+cards = (f'<div class="cert">{seal}<h3>משרד הבריאות</h3><p>ה־<bdi>ONE Splint</bdi> רשום באגף לאביזרים ומכשור רפואי (אמ״ר).</p></div>'
+         f'<div class="cert">{seal}<h3>ה־FDA האמריקאי</h3><p>ה־<bdi>ONE Splint</bdi> רשום ב־FDA (מנהל המזון והתרופות האמריקאי) בשלוש מידות.</p></div>')
+if 'אמ״ר' not in s:
+    s = s.replace(iso.group(0), iso.group(0) + cards, 1)
+wr('he/index.html', s)
 
-s = rd('faqs/index.html')
-s = s.replace(' The ONE Splint is registered with the Israel Ministry of Health Medical Devices Division (AMAR) and listed with the U.S. FDA.', '')
-assert 'AMAR' not in s
-wr('faqs/index.html', s)
+s = rd('he/faqs/index.html')
+old = 'מפעילה מערכת ניהול איכות בתקן ISO 13485:2016 (מכון התקנים הישראלי, תעודה מספר 1123048).'
+assert s.count(old) == 2, 'he faq cert'
+s = s.replace(old, old + ' ה־ONE Splint רשום באגף לאביזרים ומכשור רפואי (אמ״ר) של משרד הבריאות ורשום ב־FDA האמריקאי.')
+wr('he/faqs/index.html', s)
 
-s = rd('he/3d-printed-cast/index.html')
-s = sub1(s, ' ה־<bdi>ONE Splint</bdi> רשום באגף לאביזרים ומכשור רפואי (אמ״ר) של משרד הבריאות ורשום ב־FDA האמריקאי.', '', 'he cast cert')
-wr('he/3d-printed-cast/index.html', s)
+s = rd('3d-printed-cast/index.html')
+s = sub1(s, 'Standards Institution of Israel (certificate 1123048). Cast fitting',
+         'Standards Institution of Israel (certificate 1123048). The ONE Splint is registered with the Israel Ministry of Health Medical Devices Division (AMAR) and listed with the U.S. FDA. Cast fitting', 'en cast cert')
+wr('3d-printed-cast/index.html', s)
 
 # 2. Testimonials: excerpts that leave out outcome claims, marked with […]
 EN = [
