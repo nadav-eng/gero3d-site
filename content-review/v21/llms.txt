@@ -1,0 +1,39 @@
+# Gero3D
+
+> Gero3D (Gero) is an Israeli orthopedic technology company. Its platform turns an iPad or iPhone scan of a patient's limb into an automatically designed, 3D-printed cast made for that one patient. Gero3D works with orthopedic clinics and hospitals in Israel and the United States.
+
+Key facts:
+- Products today: personalized 3D-printed casts for the upper limb (Short Arm Cast, Thumb Spica Cast, De Quervain Cast) and the ONE Splint, a ready-made 3D-printed volar wrist splint in three sizes for the first visit.
+- Workflow: the clinic scans the limb with the Gero app on an iPad (under two minutes; the new app version also runs on iPhone, about 1 mm accuracy); the software designs the cast automatically in about 40 seconds instead of about 45 minutes by hand; certified production partners print it and ship it to the clinic within 3 days.
+- The cast weighs about 60 g, compared with 1.5 to 2 kg for a traditional plaster cast. It is water-resistant (not waterproof) and comes off without a saw.
+- More than 500 patient treatments on the Gero platform.
+- Quality: ISO 13485:2016 quality management system, certified by the Standards Institution of Israel. The ONE Splint is registered with the Israel Ministry of Health Medical Devices Division (AMAR) and listed with the U.S. FDA.
+- In development: a 3D-printed orthotics and prosthetics (O&P) service, including ankle-foot orthoses (AFOs). Not yet available.
+- Clinics can start with a free pilot: 10 casts at no cost, free training, and the iPad provided by Gero3D.
+- Treatment decisions are always made by the treating doctor. Gero3D does not promise clinical outcomes.
+- Founder: Nadav Ichay (נדב ישי).
+
+## For clinics
+- [3D-printed cast program for clinics, free pilot](https://gero3d.com/clinics/): how the program works and the demo request form
+- [3D-printed cast](https://gero3d.com/3d-printed-cast/): what a 3D-printed cast is and how it compares with plaster and fiberglass
+- [3D-printed splint (ONE Splint)](https://gero3d.com/3d-printed-splint/): the ready-made 3D-printed wrist splint
+- [Custom orthosis 3D printing](https://gero3d.com/3d-printed-orthosis/): how custom 3D-printed orthoses are made (scan, design, print) and what Gero3D offers today vs. in development
+- [3D-printed AFOs: what the research shows](https://gero3d.com/3d-printed-afo/): evidence review on 3D-printed ankle-foot orthoses, with references
+- [How to offer 3D-printed casts at your clinic](https://gero3d.com/how-to-offer-3d-printed-casts-at-your-clinic/): practical guide for clinics, from equipment to the free pilot
+- [FAQs](https://gero3d.com/faqs/): questions from clinics and patients
+
+## For patients
+- [Patients](https://gero3d.com/patients/): living with a Gero cast
+
+## Hebrew (עברית)
+- [גבס מודפס בתלת מימד](https://gero3d.com/he/3d-printed-cast/)
+- [סד מודפס בתלת מימד לשורש כף היד](https://gero3d.com/he/3d-printed-splint/)
+- [סד מותאם אישית מודפס בתלת מימד](https://gero3d.com/he/3d-printed-orthosis/)
+- [תוכנית לקליניקות ופיילוט חינם](https://gero3d.com/he/clinics/)
+- [שאלות נפוצות](https://gero3d.com/he/faqs/)
+
+## Optional
+- [Blog](https://gero3d.com/blog/)
+- [U.S. pilot program](https://gero3d.com/usa-pilot-program/): free pilot for orthopedic clinics in the United States
+- [Press kit](https://gero3d.com/press/): boilerplate, key facts, founder bio, logos and images
+- [Contact](mailto:office@gero3d.com)

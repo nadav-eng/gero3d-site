@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>גבס מודפס בתלת מימד לקליניקות, פיילוט חינם | Gero3D</title>
+<meta name="description" content="גבס מודפס בתלת מימד ומותאם אישית לכל מטופל, תחליף קל לגבס רגיל. פיילוט חינם לקליניקות: 10 גבסים ללא עלות, הדרכה והציוד עלינו.">
+<link rel="canonical" href="https://gero3d.com/he/clinics/">
+<meta property="og:url" content="https://gero3d.com/he/clinics/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gero3D">
+<meta property="og:title" content="גבס מודפס בתלת מימד לקליניקות, פיילוט חינם | Gero3D">
+<meta property="og:description" content="גבס מודפס בתלת מימד ומותאם אישית לכל מטופל, תחליף קל לגבס רגיל. פיילוט חינם לקליניקות: 10 גבסים ללא עלות, הדרכה והציוד עלינו.">
+<meta property="og:image" content="https://gero3d.com/assets/img/app-scan.webp">
+<meta name="theme-color" content="#e5eaed">
+<meta name="gero-site-version" content="v21">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Heebo:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<meta property="og:locale" content="he_IL">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="alternate" hreflang="en" href="https://gero3d.com/clinics/">
+<link rel="alternate" hreflang="he" href="https://gero3d.com/he/clinics/">
+<link rel="alternate" hreflang="x-default" href="https://gero3d.com/clinics/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2FGEH6HE0B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});
+gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+gtag('js',new Date());gtag('config','G-2FGEH6HE0B');</script>
+</head>
+<body>
+<a class="skip" href="#main">דלג לתוכן</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/he/" aria-label="Gero3D, דף הבית"><img src="/assets/img/logo.svg" alt="Gero3D" width="104" height="34"></a>
+    <a class="lang-switch lang-switch-m" href="/clinics/" hreflang="en" lang="en" aria-label="English">EN</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+    <nav class="nav" id="nav" aria-label="ראשי" dir="rtl"><a href="/he/clinics/" aria-current="page">לקליניקות</a><a href="/he/#platform">הפלטפורמה</a><a href="/he/#casts">מוצרים</a><a href="/he/#standards">תקנים</a><a href="/he/patients/">מטופלים</a><a href="/he/faqs/">שאלות נפוצות</a><a href="/he/blog/">בלוג</a><a class="lang-switch" href="/clinics/" hreflang="en" lang="en" aria-label="English">EN</a><a class="btn btn-primary" href="/he/clinics/#demo">לתיאום הדגמה</a></nav>
+  </div>
+</header>
+<main id="main" dir="rtl">
+<style>
+.pilot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6);margin-top:var(--space-8)}
+.pilot-card{background:var(--dark-raised);border-radius:var(--radius-lg);padding:var(--space-8) var(--space-6)}
+.pilot-card .big{display:block;font-size:clamp(40px,5vw,56px);font-weight:300;line-height:1;color:var(--gero-green);margin-bottom:var(--space-4)}
+.pilot-card h3{color:#fff}
+.pilot-card p{color:var(--on-dark-muted);margin-top:var(--space-2)}
+.pilot-note{margin-top:var(--space-6);color:var(--on-dark-muted)}
+.lead-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--space-12);align-items:start}
+.lead-form{background:var(--surface-raised);border-radius:var(--radius-lg);padding:clamp(20px,4vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4) var(--space-6)}
+.lead-form .full{grid-column:1/-1}
+.lead-form label{display:grid;gap:6px;font-size:14px;font-weight:500}
+.lead-form input,.lead-form select,.lead-form textarea{font:400 16px/1.4 var(--font-sans);color:var(--ink);background:var(--surface);border:1.5px solid transparent;border-radius:var(--radius-md);padding:12px 14px;width:100%}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--gero-blue);background:#fff}
+.lead-form textarea{min-height:96px;resize:vertical}
+.lead-form .opt{font-weight:400;color:var(--ink-muted)}
+.lead-form .hp{position:absolute;left:-9999px}
+.lead-form button{justify-self:start}
+.lead-form .fine{font-size:13px;color:var(--ink-muted)}
+.lead-aside > * + *{margin-top:var(--space-6)}
+.lead-aside ul{margin:0;padding:0;list-style:none;display:grid;gap:var(--space-3)}
+.lead-aside li{display:flex;gap:10px}
+.lead-aside li::before{content:"";flex:none;width:8px;height:8px;margin-top:10px;border-radius:2px;background:var(--gero-blue)}
+[dir="rtl"] .lead-form button{justify-self:end}
+[dir="rtl"] .btn svg{transform:scaleX(-1)}
+[dir="rtl"] .lead-form, [dir="rtl"] .lead-aside, [dir="rtl"] .page-head, [dir="rtl"] section{font-family:"Heebo",var(--font-sans)}
+@media (max-width:860px){.pilot{grid-template-columns:1fr}.lead-wrap{grid-template-columns:1fr}.lead-form{grid-template-columns:1fr}}
+
+/* v13: shorter path to the form on phones */
+.m-cta{display:none}
+@media (max-width:520px){
+.adv{grid-template-columns:28px minmax(0,1fr);column-gap:14px;row-gap:2px;padding:16px 18px}
+.adv svg{width:28px;height:28px;grid-row:span 2}
+.adv h3{font-size:16px}.adv p{font-size:14px}
+.pilot{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pilot-card{padding:16px 8px;text-align:center}
+.pilot-card .big{font-size:30px;margin-bottom:6px}
+.pilot-card h3{font-size:14px}.pilot-card p{display:none}
+.steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.step{padding:16px}.step h3{font-size:18px}.step p{font-size:14px}
+}
+@media (max-width:760px){
+.m-cta{display:flex;justify-content:center;position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:opacity .2s,transform .2s}
+.m-cta.is-hidden{opacity:0;transform:translateY(16px);pointer-events:none}
+main{padding-bottom:72px}
+}
+@media (prefers-reduced-motion:reduce){.m-cta{transition:none}}
+</style>
+<div class="page-head"><div class="wrap stack">
+  <p class="label blue">לקליניקות</p>
+  <h1>גבסים מותאמים אישית בקליניקה שלכם</h1>
+  <p class="lede">Gero נותנת לצוות שלכם אייפד, אפליקציה ורשת ייצור. אתם סורקים, אנחנו מתכננים ומדפיסים, והמטופלים מקבלים <a href="/he/3d-printed-cast/">גבס מודפס בתלת מימד</a>, קל ועמיד במים, שנבנה בדיוק בשבילם.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#demo">לתיאום הדגמה <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="btn btn-ghost" href="/he/#video">לצפייה בסרטון</a></div>
+</div></div>
+<section class="dark" id="pilot">
+  <div class="wrap">
+    <div class="section-head"><p class="label">פיילוט חינם</p><h2>מתחילים בפיילוט חינם</h2><p class="lede">רואים את Gero עובדת עם המטופלים שלכם, לפני שמתחייבים למשהו.</p></div>
+    <div class="pilot"><div class="pilot-card"><span class="big">10</span><h3>גבסים ללא עלות</h3><p>10 הגבסים המותאמים הראשונים עלינו.</p></div><div class="pilot-card"><span class="big">0</span><h3>עלות הדרכה</h3><p>אנחנו מדריכים את הצוות בקליניקה, בחינם.</p></div><div class="pilot-card"><span class="big">iPad</span><h3>הציוד עלינו</h3><p>אנחנו מספקים אייפד עם אפליקציית Gero וסורק.</p></div></div>
+    <p class="pilot-note">בלי התחייבות. בסוף הפיילוט אתם מחליטים אם להמשיך. קליניקה בארה״ב? ראו את <a href="/he/usa-pilot-program/" style="color:#fff">הפיילוט בארה״ב</a>.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="section-head"><p class="label">למה קליניקות בוחרות ב-Gero</p><h2>שירות חדש, כמעט בלי עבודה נוספת</h2></div>
+    <div class="adv-grid"><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 5a11 11 0 1 0 0 22c2 0 2-2 1-3s-1-3 1-3h3a6 6 0 0 0 6-6C27 9 22 5 16 5z"/><circle cx="11" cy="13" r="1.4"/><circle cx="16" cy="10" r="1.4"/><circle cx="21" cy="13" r="1.4"/></svg><h3>שירות שמטופלים מבקשים</h3><p>גבס קל ועמיד במים, בצבע שהמטופל בוחר. משפחות שמות לב ומספרות.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 9v7l5 3"/></svg><h3>תהליך של שתי דקות</h3><p>סורקים, בוחרים גבס ומזמינים מאפליקציה אחת, באותו ביקור. האפליקציה עובדת באייפד, ובגרסה החדשה גם באייפון.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 24 24 8M10 10l2 2M20 20l2 2M22 10l-2 2M12 20l-2 2"/><circle cx="16" cy="16" r="3"/></svg><h3>בלי חדר גבס</h3><p>בלי גבס, בלי אמבטיות מים ובלי מסור בהסרה. החדר נשאר נקי.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="20" height="20" rx="6"/><path d="M11 16h10M16 11v10"/></svg><h3>בלי השקעה מראש</h3><p>אין ציוד לקנות ואין תוכנה להתקין. את האייפד אנחנו מספקים.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 22c4-8 8-12 20-12M20 5l6 5-6 5"/></svg><h3>אספקה תוך 3 ימים</h3><p>הגבסים מודפסים ברשת הייצור המוסמכת שלנו ונשלחים אליכם.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 4 26 10v12L16 28 6 22V10z"/><path d="M16 4v24M6 10l10 6 10-6"/></svg><h3>תקני ציוד רפואי</h3><p>מערכת איכות מוסמכת ISO 13485:2016. מעל 500 טיפולים.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 20c4-3 8-3 11 0s7 3 11 0M5 13c4-3 8-3 11 0s7 3 11 0"/></svg><h3>היגייני וידידותי לעור</h3><p>מבנה פתוח ומאוורר שקל לשמור על ניקיונו.</p></div><div class="adv"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 3l3 2.5 3.9-.4 1.2 3.7 3.4 2-1 3.8 1.9 3.4-2.8 2.7-.1 3.9-3.8.8-2 3.4-3.6-1.5-3.6 1.5-2-3.4-3.8-.8-.1-3.9L3.5 18l1.9-3.4-1-3.8 3.4-2 1.2-3.7 3.9.4z"/><path d="m11.5 16 3 3 6-6"/></svg><h3>ליווי בכל מקרה</h3><p>אנחנו בודקים כל הזמנה ומלווים את הצוות בפיילוט ואחריו.</p></div></div>
+  </div>
+</section>
+<section class="dark">
+  <div class="wrap">
+    <div class="section-head"><p class="label">איך מתחילים</p><h2>משיחה ראשונה לגבס ראשון</h2></div>
+    <ol class="steps"><li class="step"><span class="n">01</span><h3>הדגמה</h3><p>שיחה של חצי שעה: האפליקציה, הגבסים ואיך זה משתלב אצלכם.</p></li><li class="step"><span class="n">02</span><h3>הקמה</h3><p>אנחנו מביאים את האייפד ומדריכים את הצוות בקליניקה.</p></li><li class="step"><span class="n">03</span><h3>פיילוט</h3><p>10 הגבסים הראשונים בחינם, ואנחנו מלווים כל מקרה.</p></li><li class="step"><span class="n">04</span><h3>החלטה</h3><p>ממשיכים עם Gero, או לא. בלי התחייבות.</p></li></ol>
+  </div>
+</section>
+<section class="raised" id="demo">
+  <div class="wrap lead-wrap">
+    <div class="lead-aside">
+      <p class="label blue">תיאום הדגמה</p>
+      <h2>בואו נדבר על הקליניקה שלכם</h2>
+      <p class="lede">השאירו פרטים ונחזור אליכם תוך יום עסקים.</p>
+      <ul><li>פיילוט חינם של 10 גבסים</li><li>הדרכה חינם בקליניקה</li><li>הציוד עלינו</li><li>בלי התחייבות</li></ul>
+    </div>
+    <form class="lead-form" action="https://formsubmit.co/office@gero3d.com" method="POST">
+  <input type="hidden" name="_subject" value="ליד חדש מקליניקה – gero3d.com">
+  <input type="hidden" name="_next" value="https://gero3d.com/he/clinics/thanks/">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="language" value="he">
+  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <label>שם מלא<input name="name" required autocomplete="name"></label>
+  <label>קליניקה או בית חולים<input name="clinic" required autocomplete="organization"></label>
+  <label>תפקיד<select name="role" required><option value="" disabled selected></option><option>אורתופד/ית</option><option>רופא/ה</option><option>גבסן/ית</option><option>אח/ות</option><option>מנהל/ת קליניקה</option><option>אחר</option></select></label>
+  <label>עיר<input name="city" required autocomplete="address-level2"></label>
+  <label>טלפון<input name="phone" type="tel" required autocomplete="tel" dir="ltr"></label>
+  <label>אימייל<input name="email" type="email" required autocomplete="email" dir="ltr"></label>
+  <label class="full"><span>מטופלים עם שברים בחודש <span class="opt">(לא חובה)</span></span><select name="monthly_fractures"><option value="" selected></option><option>פחות מ-10</option><option>10–30</option><option>30–100</option><option>מעל 100</option><option>לא בטוח/ה</option></select></label>
+  <label class="full"><span>משהו נוסף? <span class="opt">(לא חובה)</span></span><textarea name="message"></textarea></label>
+  <button class="btn btn-primary full" type="submit">לתיאום הדגמה <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+  <p class="fine full">מעדיפים וואטסאפ? <a href="https://wa.me/972527804448?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A7%D7%9C%D7%99%D7%A0%D7%99%D7%A7%D7%94%20%D7%95%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A4%D7%99%D7%99%D7%9C%D7%95%D7%98%20%D7%A9%D7%9C%20Gero3D" target="_blank" rel="noopener">שלחו לנו הודעה</a>. מעדיפים מייל? כתבו ל-<a href="mailto:office@gero3d.com">office@gero3d.com</a>. איך אנחנו שומרים על הפרטים שלכם: <a href="/he/privacy/">מדיניות הפרטיות</a>.</p>
+</form>
+  </div>
+</section>
+
+</main>
+<a class="m-cta btn btn-primary is-hidden" href="#demo">לתיאום הדגמה</a>
+<script>(function(){var c=document.querySelector('.m-cta');if(!c||!('IntersectionObserver' in window))return;var seen=new Set();var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?seen.add(e.target):seen.delete(e.target)});c.classList.toggle('is-hidden',seen.size>0)});document.querySelectorAll('.page-head,#demo').forEach(function(el){io.observe(el)});c.addEventListener('click',function(){if(window.gtag)gtag('event','cta_click',{cta:'sticky_mobile'})})})();</script>
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="/he/" aria-label="Gero3D, דף הבית"><img src="/assets/img/logo-on-dark.svg" alt="Gero3D" width="86" height="28"></a>
+    <nav aria-label="ניווט תחתון" dir="rtl">
+      <a href="/he/clinics/" aria-current="page">לקליניקות</a><a href="/he/usa-pilot-program/">פיילוט בארה״ב</a><a href="/he/3d-printed-cast/">גבס מודפס בתלת מימד</a><a href="/he/3d-printed-afo/">AFO מודפס בתלת מימד</a><a href="/he/3d-printed-splint/">סד מודפס בתלת מימד</a><a href="/he/3d-printed-orthosis/">סד מותאם אישית</a><a href="/he/patients/">מטופלים</a><a href="/he/faqs/">שאלות נפוצות</a><a href="/he/blog/">בלוג</a><a href="/he/press/">לעיתונות</a><a href="https://www.linkedin.com/company/gero3d" rel="noopener">LinkedIn</a><a href="/he/privacy/">פרטיות</a><a href="/he/terms/">תנאי שימוש</a>
+    </nav>
+    <span dir="ltr">© 2026 Gero3D · scan · print · heal</span>
+  </div>
+</footer>
+<script>
+  (function(){var b=document.querySelector('.menu-toggle'),n=document.getElementById('nav');if(!b)return;
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded',false)}});})();
+  document.querySelectorAll('.compare').forEach(function(c){var r=c.querySelector('.compare-range');r.addEventListener('input',function(){c.style.setProperty('--pos',r.value+'%')});});
+  document.querySelectorAll('.video').forEach(function(v){var a=v.querySelector('.video-poster');a.addEventListener('click',function(e){e.preventDefault();var m=document.createElement('video');m.src=v.dataset.src;m.poster=v.dataset.poster;m.controls=true;m.playsInline=true;m.autoplay=true;m.setAttribute('title','Gero3D explainer video');v.innerHTML='';v.appendChild(m);var p=m.play();if(p&&p.catch)p.catch(function(){});});});
+</script>
+<a class="wa-fab" href="https://wa.me/972527804448?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A7%D7%9C%D7%99%D7%A0%D7%99%D7%A7%D7%94%20%D7%95%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A4%D7%99%D7%99%D7%9C%D7%95%D7%98%20%D7%A9%D7%9C%20Gero3D" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ" title="שליחת הודעה בוואטסאפ"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+<style>.wa-fab{position:fixed;left:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:51;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.2)}.wa-fab svg{width:30px;height:30px}.wa-fab:focus-visible{outline:3px solid var(--gero-blue);outline-offset:3px}@media (max-width:760px){body:has(.m-cta) .wa-fab{bottom:calc(84px + env(safe-area-inset-bottom))}}@media print{.wa-fab{display:none}}</style>
+<script>(function(){var w=document.querySelector('.wa-fab');if(w)w.addEventListener('click',function(){if(window.gtag)gtag('event','whatsapp_click',{link_url:'wa.me',page_location:location.pathname})})})();</script>
+</body>
+</html>
